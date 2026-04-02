@@ -50,3 +50,13 @@ public class Main {
 
     }
 }
+
+public static void main(String[] args) {
+    Carro meuCarro = new Carro("VW", "Gol", 2015);
+    trocarModelo(meuCarro);
+    System.out.println(meuCarro.getModelo());
+}
+
+public static void trocarModelo(Carro c) {
+    c.setModelo("Fusca");
+}
