@@ -30,7 +30,11 @@ public class Carro {
     }
 
     public void setAno(int ano) {
-        this.ano = ano;
+        if (ano < 1886 || ano > 2026) {
+            System.out.println("Erro: ano deve estar entre 1886 e 2026!");
+        } else {
+            this.ano = ano;
+        }
     }
 
     public void exibir() {
