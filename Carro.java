@@ -59,6 +59,10 @@ public class Carro {
         return 2026 - ano;
     }
 
+    public static void imprimirTotal() {
+        System.out.println("Total de carros: " + totalCarros);
+    }
+
     public static int getTotalCarros() {
         return totalCarros;
     }
