@@ -36,5 +36,17 @@ public class Main {
         System.out.println("Acessando por OBJETO: meuCarro.getTotalCarros() = " + meuCarro.getTotalCarros());
         System.out.println("Ambos retornam o MESMO valor porque totalCarros é atributo da classe!");
         System.out.println("Diferença: um é compartilhado (static) e outro é único por objeto (instância).\n");
+
+        demonstrarEscopo();
+    }
+    private static void demonstrarEscopo() {
+        System.out.println("\n--- Demonstração de escopo de variáveis ---");
+
+        int x;
+        if (true) {
+            x = 10;
+        }
+        System.out.println("x (corrigido) = " + x);
+
     }
 }
