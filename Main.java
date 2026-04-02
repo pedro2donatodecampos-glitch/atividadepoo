@@ -4,8 +4,14 @@ public class Main {
     public static void main(String[] args) {
 
         Carro meuCarro = new Carro("Toyota", "Corolla", 2020);
-
+        System.out.println("Carro com construtor parametrizado:");
         meuCarro.exibir();
+
+        Carro carroDesconhecido = new Carro();
+        System.out.println("Carro com construtor sem parâmetros (valores padrão):");
+        carroDesconhecido.exibir();
+
+        System.out.println("-- Continuando com o carro principal --");
 
         int idade = meuCarro.idadeDoCarro();
         System.out.println("Idade do carro: " + idade);

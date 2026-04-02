@@ -8,9 +8,16 @@ public class Carro {
         this.modelo = modelo;
         if (ano < 1886 || ano > 2026) {
             System.out.println("Erro: ano deve estar entre 1886 e 2026!");
-            this.ano = 2026; 
+            this.ano = 2026;
+        } else {
             this.ano = ano;
         }
+    }
+
+    public Carro() {
+        this.marca = "Desconhecido";
+        this.modelo = "Desconhecido";
+        this.ano = 0;
     }
 
     public String getMarca() {
