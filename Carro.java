@@ -32,4 +32,12 @@ public class Carro {
     public void setAno(int ano) {
         this.ano = ano;
     }
+
+    public void exibir() {
+        System.out.println("Marca: " + marca + ", Modelo: " + modelo + ", Ano: " + ano);
+    }
+
+    public int idadeDoCarro() {
+        return 2026 - ano;
+    }
 }
