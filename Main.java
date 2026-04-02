@@ -4,41 +4,37 @@ public class Main {
     public static void main(String[] args) {
 
         Carro meuCarro = new Carro("Toyota", "Corolla", 2020);
-        System.out.println("Carro com construtor parametrizado:");
+        System.out.println("Carro 1 criado:");
         meuCarro.exibir();
+        System.out.println("Total de carros: " + Carro.getTotalCarros());
 
         Carro carroDesconhecido = new Carro();
-        System.out.println("Carro com construtor sem parâmetros (valores padrão):");
+        System.out.println("\nCarro 2 criado:");
         carroDesconhecido.exibir();
+        System.out.println("Total de carros: " + Carro.getTotalCarros());
 
-        System.out.println("-- Continuando com o carro principal --");
-
-        int idade = meuCarro.idadeDoCarro();
-        System.out.println("Idade do carro: " + idade);
-
-        System.out.println("\nDados do carro usando getters:");
-        System.out.println("Marca: " + meuCarro.getMarca());
-        System.out.println("Modelo: " + meuCarro.getModelo());
-        System.out.println("Ano: " + meuCarro.getAno());
-
-        System.out.println("Atualizando dados do carro usando setters:");
-        meuCarro.setMarca("BMW");
-        meuCarro.setModelo("X5");
-        meuCarro.setAno(2022);
-        meuCarro.exibir();
-
-        System.out.println("Testando validação do ano:");
-        meuCarro.setAno(1800);
-        meuCarro.setAno(2030);
-
-        System.out.println("Lista de carros usando construtor:");
+        System.out.println("\n--- Criando mais 5 carros para totalizar 7 ---");
         ArrayList<Carro> carros = new ArrayList<>();
+        
         carros.add(new Carro("Honda", "Civic", 2018));
+        System.out.println("Carro 3 criado. Total: " + Carro.getTotalCarros());
+        
         carros.add(new Carro("Ford", "Focus", 2019));
+        System.out.println("Carro 4 criado. Total: " + Carro.getTotalCarros());
+        
         carros.add(new Carro("Chevrolet", "Onix", 2021));
+        System.out.println("Carro 5 criado. Total: " + Carro.getTotalCarros());
+        
+        carros.add(new Carro("Mercedes", "C-Class", 2023));
+        System.out.println("Carro 6 criado. Total: " + Carro.getTotalCarros());
+        
+        carros.add(new Carro("Audi", "A4", 2025));
+        System.out.println("Carro 7 criado. Total: " + Carro.getTotalCarros());
 
-        for (Carro c : carros) {
-            c.exibir();
-        }
+        System.out.println("\n--- Demonstração: acessando static ---");
+        System.out.println("Acessando por CLASSE: Carro.getTotalCarros() = " + Carro.getTotalCarros());
+        System.out.println("Acessando por OBJETO: meuCarro.getTotalCarros() = " + meuCarro.getTotalCarros());
+        System.out.println("Ambos retornam o MESMO valor porque totalCarros é atributo da classe!");
+        System.out.println("Diferença: um é compartilhado (static) e outro é único por objeto (instância).\n");
     }
 }

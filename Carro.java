@@ -2,6 +2,7 @@ public class Carro {
     private String marca;
     private String modelo;
     private int ano;
+    private static int totalCarros = 0;
 
     public Carro(String marca, String modelo, int ano) {
         this.marca = marca;
@@ -12,12 +13,14 @@ public class Carro {
         } else {
             this.ano = ano;
         }
+        totalCarros++;
     }
 
     public Carro() {
         this.marca = "Desconhecido";
         this.modelo = "Desconhecido";
         this.ano = 0;
+        totalCarros++;
     }
 
     public String getMarca() {
@@ -54,5 +57,9 @@ public class Carro {
 
     public int idadeDoCarro() {
         return 2026 - ano;
+    }
+
+    public static int getTotalCarros() {
+        return totalCarros;
     }
 }
